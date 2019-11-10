@@ -8,7 +8,6 @@ import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
-import jpapractice.model.Member;
 
 
 /**
@@ -17,7 +16,7 @@ import jpapractice.model.Member;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QMember extends EntityPathBase<Member> {
 
-    private static final long serialVersionUID = 1806476690L;
+    private static final long serialVersionUID = -894525961L;
 
     private static final PathInits INITS = PathInits.DIRECT2;
 

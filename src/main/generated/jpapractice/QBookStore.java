@@ -7,7 +7,6 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
-import jpapractice.model.BookStore;
 
 
 /**
@@ -16,7 +15,7 @@ import jpapractice.model.BookStore;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QBookStore extends EntityPathBase<BookStore> {
 
-    private static final long serialVersionUID = 1478465920L;
+    private static final long serialVersionUID = 2120780539L;
 
     public static final QBookStore bookStore = new QBookStore("bookStore");
 

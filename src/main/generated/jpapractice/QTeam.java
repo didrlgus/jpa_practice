@@ -8,8 +8,6 @@ import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
-import jpapractice.model.Member;
-import jpapractice.model.Team;
 
 
 /**
@@ -18,13 +16,13 @@ import jpapractice.model.Team;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QTeam extends EntityPathBase<Team> {
 
-    private static final long serialVersionUID = -480593067L;
+    private static final long serialVersionUID = 651790586L;
 
     public static final QTeam team = new QTeam("team");
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
-    public final ListPath<Member, QMember> memberList = this.<Member, QMember>createList("memberList", Member.class, QMember.class, PathInits.DIRECT2);
+    public final SetPath<Member, QMember> memberSet = this.<Member, QMember>createSet("memberSet", Member.class, QMember.class, PathInits.DIRECT2);
 
     public final StringPath name = createString("name");
 

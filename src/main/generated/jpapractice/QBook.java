@@ -8,7 +8,6 @@ import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
-import jpapractice.model.Book;
 
 
 /**
@@ -17,7 +16,7 @@ import jpapractice.model.Book;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QBook extends EntityPathBase<Book> {
 
-    private static final long serialVersionUID = -481119263L;
+    private static final long serialVersionUID = 651264390L;
 
     private static final PathInits INITS = PathInits.DIRECT2;
 

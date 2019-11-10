@@ -1,7 +1,7 @@
 package jpapractice.repository;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import jpapractice.model.Book;
+import jpapractice.Book;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

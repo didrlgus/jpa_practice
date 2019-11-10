@@ -1,6 +1,6 @@
 package jpapractice.repository;
 
-import jpapractice.model.Book;
+import jpapractice.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

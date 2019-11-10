@@ -1,17 +1,18 @@
-package jpapractice.model;
+package jpapractice;
 
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
-@Builder
+// 단방향 관계 시 N+1 문제
+
+@Entity
 @Getter
 @Setter
-@Entity
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Team {
+public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +20,6 @@ public class Team {
     @Column
     private String name;
 
-    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
-    private List<Member> memberList;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private BookStore bookStore;
 }

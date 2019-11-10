@@ -1,4 +1,4 @@
-package jpapractice.model;
+package jpapractice;
 
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
