@@ -1,6 +1,6 @@
 package jpapractice.controller;
 
-import jpapractice.Book;
+import jpapractice.domain.Book;
 import jpapractice.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

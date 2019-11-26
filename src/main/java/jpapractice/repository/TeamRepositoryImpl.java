@@ -1,11 +1,10 @@
 package jpapractice.repository;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import jpapractice.Team;
+import jpapractice.domain.Team;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
-import java.util.Set;
 
 import static jpapractice.QTeam.team;
 import static jpapractice.QMember.member;

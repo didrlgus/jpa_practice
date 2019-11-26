@@ -8,6 +8,8 @@ import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
+import jpapractice.domain.Member;
+import jpapractice.domain.Team;
 
 
 /**
@@ -16,7 +18,7 @@ import com.querydsl.core.types.dsl.PathInits;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QTeam extends EntityPathBase<Team> {
 
-    private static final long serialVersionUID = 651790586L;
+    private static final long serialVersionUID = -480593067L;
 
     public static final QTeam team = new QTeam("team");
 

@@ -1,6 +1,6 @@
 package jpapractice.repository;
 
-import jpapractice.Team;
+import jpapractice.domain.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

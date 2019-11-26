@@ -1,9 +1,8 @@
 package jpapractice.repository;
 
-import jpapractice.Team;
+import jpapractice.domain.Team;
 
 import java.util.List;
-import java.util.Set;
 
 public interface TeamRepositoryCustom {
     List<Team> getAllTeamList();

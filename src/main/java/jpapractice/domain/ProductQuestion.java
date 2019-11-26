@@ -1,9 +1,9 @@
-package jpapractice;
+package jpapractice.domain;
 
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Builder
 @Getter
@@ -11,14 +11,14 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Team {
+public class ProductQuestion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private String name;
+    private String message;
 
-    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
-    private Set<Member> memberSet;
+    @OneToMany(mappedBy = "question", fetch = FetchType.LAZY)
+    private List<Answer> answerList;
 }

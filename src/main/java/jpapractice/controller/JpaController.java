@@ -1,7 +1,7 @@
 package jpapractice.controller;
 
-import jpapractice.Member;
-import jpapractice.Team;
+import jpapractice.domain.Member;
+import jpapractice.domain.Team;
 import jpapractice.repository.MemberRepository;
 import jpapractice.repository.TeamRepository;
 import lombok.RequiredArgsConstructor;

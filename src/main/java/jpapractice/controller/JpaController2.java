@@ -1,7 +1,7 @@
 package jpapractice.controller;
 
-import jpapractice.Book;
-import jpapractice.BookStore;
+import jpapractice.domain.Book;
+import jpapractice.domain.BookStore;
 import jpapractice.repository.BookRepository;
 import jpapractice.repository.BookStoreRepository;
 import lombok.RequiredArgsConstructor;

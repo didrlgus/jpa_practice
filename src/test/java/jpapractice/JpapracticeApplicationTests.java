@@ -1,5 +1,7 @@
 package jpapractice;
 
+import jpapractice.domain.Book;
+import jpapractice.domain.BookStore;
 import jpapractice.repository.BookRepository;
 import jpapractice.repository.BookStoreRepository;
 import org.junit.jupiter.api.Test;

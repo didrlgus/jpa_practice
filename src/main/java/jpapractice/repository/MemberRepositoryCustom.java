@@ -1,6 +1,6 @@
 package jpapractice.repository;
 
-import jpapractice.Member;
+import jpapractice.domain.Member;
 
 import java.util.List;
 

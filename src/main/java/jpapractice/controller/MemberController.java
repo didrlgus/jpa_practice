@@ -1,7 +1,7 @@
 package jpapractice.controller;
 
-import jpapractice.Member;
-import jpapractice.Team;
+import jpapractice.domain.Member;
+import jpapractice.domain.Team;
 import jpapractice.repository.MemberRepository;
 import jpapractice.repository.TeamRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +26,7 @@ public class MemberController {
     private final MemberRepository memberRepository;
     private final TeamRepository teamRepository;
 
+    // n+1 문제가 발생하는 요청
     @GetMapping("/member")
     public ResponseEntity<?> init() {
 

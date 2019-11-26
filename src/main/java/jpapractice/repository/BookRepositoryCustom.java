@@ -1,6 +1,6 @@
 package jpapractice.repository;
 
-import jpapractice.Book;
+import jpapractice.domain.Book;
 
 import java.util.List;
 
