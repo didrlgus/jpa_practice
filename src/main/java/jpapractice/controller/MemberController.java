@@ -4,6 +4,7 @@ import jpapractice.domain.Member;
 import jpapractice.domain.Team;
 import jpapractice.repository.MemberRepository;
 import jpapractice.repository.TeamRepository;
+import jpapractice.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,7 @@ public class MemberController {
 
     private final MemberRepository memberRepository;
     private final TeamRepository teamRepository;
+    private final MemberService memberService;
 
     // n+1 문제가 발생하는 요청
     @GetMapping("/member")
@@ -75,5 +77,12 @@ public class MemberController {
         log.info("QueryDsl 쿼리 끝2");
 
         return ResponseEntity.ok("쿼리 성공3");
+    }
+
+    @GetMapping("/transaction")
+    public ResponseEntity<?> init4() throws Exception {
+
+        memberService.transactionExample();
+        return null;
     }
 }
