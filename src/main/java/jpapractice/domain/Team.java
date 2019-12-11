@@ -21,4 +21,7 @@ public class Team {
 
     @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
     private Set<Member> memberSet;
+
+    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
+    private Set<Coach> coachSet;
 }

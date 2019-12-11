@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.Set;
 
 public interface TeamRepository extends JpaRepository<Team, Long>, TeamRepositoryCustom{
-    @Query("SELECT t FROM Team t join fetch t.memberSet order by t.id asc ")
+    @Query("SELECT t FROM Team t join fetch t.memberSet join fetch t.coachSet order by t.id asc ")
     Set<Team> findAllFetch();
 }

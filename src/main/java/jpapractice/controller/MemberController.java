@@ -39,6 +39,8 @@ public class MemberController {
 
         log.info("일반 쿼리 시작2");
         List<Team> teamList = teamRepository.findAll();
+        teamList.forEach(t->log.info("##### {}",t.getMemberSet().getClass()));  // 프록시 객체
+        teamList.forEach(t->log.info("##### {}",t.getCoachSet().getClass()));   // 프록시 객체
         teamList.forEach(t-> t.getMemberSet().forEach(m->m.getName()));
         log.info("일반 쿼리 끝2");
 
@@ -50,13 +52,17 @@ public class MemberController {
 
         log.info("JPQL 쿼리 시작");
         List<Member> memberList = memberRepository.findAllFetch();
+        memberList.forEach(m->log.info("##### {}", m.getTeam().getClass()));    // fetch join으로 가져온 실제 엔티티 객체
         memberList.forEach(m -> m.getTeam().getName());
         log.info("JPQL 쿼리 끝");
 
         log.info("JPQL 쿼리 시작2");
         Set<Team> teamSet = teamRepository.findAllFetch();
+        teamSet.forEach(t-> t.getMemberSet().forEach(m->log.info("##### {}",m.getClass())));        // fetch join으로 가져온 실제 엔티티 객체
+        teamSet.forEach(t-> t.getCoachSet().forEach(c->log.info("##### {}",c.getClass())));         // fetch join으로 가져오지 않은 coach 프록시 엔티티
         // List 라면 카티션 곱 발생, 데이터 중복, 자료구조를 List말고 LinkedHashSet으로 바꾸면 해결 가능
         teamSet.forEach(t-> t.getMemberSet().forEach(m-> System.out.println(m.getName())));
+        teamSet.forEach(t-> t.getCoachSet().forEach(c->c.getName()));       // coach 엔티티는 fetch join으로 가져오지 않아 접근 시 N+1문제 그대로 발생
         log.info("JPQL 쿼리 끝2");
 
         return ResponseEntity.ok("쿼리 성공2");
@@ -80,9 +86,20 @@ public class MemberController {
     }
 
     @GetMapping("/transaction")
-    public ResponseEntity<?> init4() throws Exception {
+    public ResponseEntity<?> init4() {
 
         memberService.transactionExample();
+
+        log.info("##### 프록시 : {}", memberService.getClass());
+        return null;
+    }
+
+    @GetMapping("/transaction2")
+    public ResponseEntity<?> init5() {
+
+        memberService.transactionExample2();
+
+        log.info("##### 프록시 : {}", memberService.getClass());
         return null;
     }
 }
